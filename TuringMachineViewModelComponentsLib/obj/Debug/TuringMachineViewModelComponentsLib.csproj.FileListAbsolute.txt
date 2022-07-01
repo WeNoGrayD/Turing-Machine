@@ -1,0 +1,9 @@
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineViewModelComponentsLib\bin\Debug\TuringMachineViewModelComponentsLib.dll
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineViewModelComponentsLib\bin\Debug\TuringMachineViewModelComponentsLib.pdb
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineViewModelComponentsLib\bin\Debug\TuringMachineClassLib.dll
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineViewModelComponentsLib\bin\Debug\TuringMachineClassLib.pdb
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineViewModelComponentsLib\obj\Debug\TuringMachineViewModelComponentsLib.csprojAssemblyReference.cache
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineViewModelComponentsLib\obj\Debug\TuringMachineViewModelComponentsLib.csproj.CoreCompileInputs.cache
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineViewModelComponentsLib\obj\Debug\TuringMachineViewModelComponentsLib.csproj.CopyComplete
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineViewModelComponentsLib\obj\Debug\TuringMachineViewModelComponentsLib.dll
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineViewModelComponentsLib\obj\Debug\TuringMachineViewModelComponentsLib.pdb

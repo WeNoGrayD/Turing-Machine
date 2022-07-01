@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TMConfig>
+  <ProblemFormulation>Сложение чисел в унарном коде.</ProblemFormulation>
+  <Alphabet>_1+=</Alphabet>
+  <TMTape>
+    <MemorySize>20</MemorySize>
+    <InitialData source="file">C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineApp\lenta1.txt</InitialData>
+    <InitialDataOffset>0</InitialDataOffset>
+  </TMTape>
+  <TMHead OffsetFromData="13" />
+  <TMStates>
+    <TMState Name="Qs">
+      <Status>Start</Status>
+      <TransitionsTable>
+        <TransitionRecord>
+          <Condition>_</Condition>
+          <CharToWrite>_</CharToWrite>
+          <Move>-&gt;</Move>
+          <DestTMState>Qs</DestTMState>
+        </TransitionRecord>
+        <TransitionRecord>
+          <Condition>1</Condition>
+          <CharToWrite>_</CharToWrite>
+          <Move>...</Move>
+          <DestTMState>Qs</DestTMState>
+        </TransitionRecord>
+        <TransitionRecord>
+          <Condition>+</Condition>
+          <CharToWrite>_</CharToWrite>
+          <Move>...</Move>
+          <DestTMState>Qs</DestTMState>
+        </TransitionRecord>
+        <TransitionRecord>
+          <Condition>=</Condition>
+          <CharToWrite>_</CharToWrite>
+          <Move>...</Move>
+          <DestTMState>Qs</DestTMState>
+        </TransitionRecord>
+      </TransitionsTable>
+      <Comment></Comment>
+    </TMState>
+  </TMStates>
+</TMConfig>

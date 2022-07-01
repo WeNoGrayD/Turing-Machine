@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TMConfig>
+	<Alphabet>abcdefgh</Alphabet>
+	<TMTape>
+		<MemorySize>30</MemorySize>
+		<InitialData>baaba</initialData>
+		<InitialDataOffset>12</InitialDataOffset>
+	</TMTape>
+	<TMHead OffsetFromData="-1" />
+	<TMStates>
+		<TMState Name="Qs">
+			<Status>Accepting</Status>
+			<TransitionsTable>
+				<TransitionRecord>
+					<Condition>b</Condition>
+					<CharToWrite>a</CharToWrite>
+					<Move>-></Move>
+					<DestTMState>Q1</DestTMState>
+				</TransitionRecord>
+			</TransitionsTable>
+			<Comment>very first state</Comment>
+		</TMState>
+		<TMState Name="Q1">
+			<Status>Accepting</Status>
+			<TransitionsTable>
+				<TransitionRecord>
+					<Condition>b</Condition>
+					<CharToWrite>a</CharToWrite>
+					<Move>-></Move>
+					<DestTMState>Q1</DestTMState>
+				</TransitionRecord>
+			</TransitionsTable>
+			<Comment>very first state</Comment>
+		</TMState>
+	</TMStates>
+</TMConfig>

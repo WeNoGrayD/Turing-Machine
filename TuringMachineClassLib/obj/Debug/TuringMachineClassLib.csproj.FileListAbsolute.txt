@@ -1,0 +1,6 @@
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineClassLib\bin\Debug\TuringMachineClassLib.dll
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineClassLib\bin\Debug\TuringMachineClassLib.pdb
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineClassLib\obj\Debug\TuringMachineClassLib.csproj.CoreCompileInputs.cache
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineClassLib\obj\Debug\TuringMachineClassLib.dll
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineClassLib\obj\Debug\TuringMachineClassLib.pdb
+C:\Users\Админ\source\repos\TuringMachineApp\TuringMachineClassLib\obj\Debug\TuringMachineClassLib.csprojAssemblyReference.cache

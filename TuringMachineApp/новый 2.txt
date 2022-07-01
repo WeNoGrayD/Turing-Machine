@@ -1,0 +1,29 @@
+
+                  Text="{Binding Path=InitialDataSource, 
+                                 Mode=OneWay,
+                                 TargetNullValue={StaticResource notSelected}}"
+                  SelectedItem="{Binding Path=InitialDataSource, 
+                                         Mode=OneWayToSource,
+                                         UpdateSourceTrigger=PropertyChanged,
+                                         Converter={StaticResource cbiToObjConverter}}"
+										 
+										 
+                                                    <ComboBox Text="{Binding Path=InitialDataSource, 
+                                                                             Mode=OneWay,
+                                                                             TargetNullValue={StaticResource notSelected}}"
+                                                              SelectedItem="{Binding Path=InitialDataSource, 
+                                                                                     Mode=OneWayToSource,
+                                                                                     UpdateSourceTrigger=PropertyChanged,
+                                                                                     Converter={StaticResource cbiToObjConverter}}"
+                                                              Margin="2,1,2,1"
+                                                              HorizontalAlignment="Center"
+                                                              ItemsSource="{Binding RelativeSource=}"/>
+                                                    <ComboBox Text="{Binding Path=DestTMState, 
+                                                                             Mode=OneWay,
+                                                                             TargetNullValue={StaticResource notSelected}}"
+                                                              SelectedItem="{Binding Path=DestTMStatee, 
+                                                                                     Mode=OneWayToSource,
+                                                                                     UpdateSourceTrigger=PropertyChanged,
+                                                                                     Converter={StaticResource cbiToObjConverter}}"
+                                                              Margin="2,1,2,1"
+                                                              HorizontalAlignment="Center"/>

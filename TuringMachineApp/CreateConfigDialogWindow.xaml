@@ -1,0 +1,152 @@
+﻿<Window x:Class="TuringMachineApp.CreateConfigDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TuringMachineApp"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:vmcmpnts="clr-namespace:TuringMachineViewModelComponentsLib;assembly=TuringMachineViewModelComponentsLib"
+        mc:Ignorable="d"
+        Title="Создать конфигурацию" Height="300" Width="400">
+
+    <Window.Resources>
+
+        <vmcmpnts:ComboBoxItemToObjectConverter x:Key="cbiToObjConverter"/>
+
+        <sys:String x:Key="notSelected">Не выбран</sys:String>
+
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={RelativeSource Self},
+                                            Path=(Validation.Errors)[0].ErrorContent}" />
+                </Trigger>
+                <Trigger Property="Validation.HasError" Value="False">
+                    <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={RelativeSource Self},
+                                            Path=Tag}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Алфавит:"
+               Grid.Row="0" Grid.Column="0"/>
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Tag="Введите строку символов. '_' должно отсутствовать. Символы не должны повторяться.">
+            <TextBox.Text>
+                <Binding Path="Alphabet" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <vmcmpnts:TMAlphabetValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <Label Content="Размер ленты:" 
+               Grid.Row="1" Grid.Column="0"/>
+        <TextBox Grid.Row="1" Grid.Column="1"
+                 Tag="Введите целое натуральное число.">
+            <TextBox.Text>
+                <Binding Path="MemorySize" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <vmcmpnts:NaturalNumberValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <Label Content="Источник данных:" 
+               Grid.Row="2" Grid.Column="0"/>
+        <ComboBox Grid.Row="2" Grid.Column="1"
+                  Height="25" Width="100"
+                  HorizontalAlignment="Left"
+                  Margin="5,0,0,0"
+                  Text="{Binding Path=InitialDataSource, 
+                                 Mode=OneWay,
+                                 TargetNullValue={StaticResource notSelected}}"
+                  SelectedItem="{Binding Path=InitialDataSource, 
+                                         Mode=OneWayToSource,
+                                         UpdateSourceTrigger=PropertyChanged,
+                                         Converter={StaticResource cbiToObjConverter}}"
+                  ToolTip="Выберите источник.">
+            <ComboBoxItem>Текст</ComboBoxItem>
+            <ComboBoxItem>Файл</ComboBoxItem>
+        </ComboBox>
+
+        <Label Content="Начальные данные:" 
+               Grid.Row="3" Grid.Column="0"/>
+        <TextBox Grid.Row="3" Grid.Column="1"
+                 Tag="Введите текст или путь к файлу.">
+            <TextBox.Text>
+                <Binding Path="InitialData" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <TextBlock Text="Смещение начальных данных на ленте:"
+                   TextWrapping="WrapWithOverflow"
+                   Grid.Row="4" Grid.Column="0"/>
+        <TextBox Grid.Row="4" Grid.Column="1"
+                 Tag="Введите целое натуральное число.">
+            <TextBox.Text>
+                <Binding Path="InitialDataOffset" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <vmcmpnts:NaturalNumberValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <TextBlock Text="Смещение головки от начальных данных:"
+                   TextWrapping="WrapWithOverflow"
+                   Grid.Row="5" Grid.Column="0"/>
+        <TextBox Grid.Row="5" Grid.Column="1"
+                 Tag="Введите целое натуральное число.">
+            <TextBox.Text>
+                <Binding Path="HeadOffset" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <UniformGrid Grid.Row="6" Grid.ColumnSpan="2"
+                     Columns="2">
+
+            <Button x:Name="btnAccept"
+                    Content="Принять" Margin="10,5,10,5"
+                    Click="btnAccept_Click"/>
+
+            <Button x:Name="btnCancel" 
+                    Content="Отменить" Margin="10,5,10,5"
+                    Click="btnCancel_Click"/>
+
+        </UniformGrid>
+
+    </Grid>
+    
+</Window>
