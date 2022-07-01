@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1585
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuringMachineApp", "TuringMachineApp\TuringMachineApp.csproj", "{71778246-5F17-4EF3-BB26-27A14802935B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{97EF2507-9BE3-4B50-8C30-A81A4620EAC8} = {97EF2507-9BE3-4B50-8C30-A81A4620EAC8}
+		{6113F664-D22A-4F95-AD40-518D678D1985} = {6113F664-D22A-4F95-AD40-518D678D1985}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TMCL", "TuringMachineClassLib\TMCL.csproj", "{6113F664-D22A-4F95-AD40-518D678D1985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuringMachineClassLib", "TuringMachineClassLib\TuringMachineClassLib.csproj", "{97EF2507-9BE3-4B50-8C30-A81A4620EAC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuringMachineViewModelComponentsLib", "TuringMachineViewModelComponentsLib\TuringMachineViewModelComponentsLib.csproj", "{58C6E5F3-6199-47B0-9F2C-DD7468F194E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71778246-5F17-4EF3-BB26-27A14802935B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71778246-5F17-4EF3-BB26-27A14802935B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71778246-5F17-4EF3-BB26-27A14802935B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71778246-5F17-4EF3-BB26-27A14802935B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6113F664-D22A-4F95-AD40-518D678D1985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6113F664-D22A-4F95-AD40-518D678D1985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6113F664-D22A-4F95-AD40-518D678D1985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6113F664-D22A-4F95-AD40-518D678D1985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97EF2507-9BE3-4B50-8C30-A81A4620EAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97EF2507-9BE3-4B50-8C30-A81A4620EAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97EF2507-9BE3-4B50-8C30-A81A4620EAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97EF2507-9BE3-4B50-8C30-A81A4620EAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C6E5F3-6199-47B0-9F2C-DD7468F194E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C6E5F3-6199-47B0-9F2C-DD7468F194E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C6E5F3-6199-47B0-9F2C-DD7468F194E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C6E5F3-6199-47B0-9F2C-DD7468F194E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDC906F6-A33E-4A93-A90D-5D0A85849182}
+	EndGlobalSection
+EndGlobal
